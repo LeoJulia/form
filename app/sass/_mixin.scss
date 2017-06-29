@@ -5,3 +5,23 @@
     size: 100%;
   }
 }
+@mixin placeholder-focus{
+  ::-webkit-input-placeholder {color: transparent}
+  ::-moz-placeholder          {color: transparent}
+  :-moz-placeholder           {color: transparent}
+  :-ms-input-placeholder      {color: transparent}
+}
+
+@mixin placeholder-text{
+  ::-webkit-input-placeholder {color:#cccccc;}
+  ::-moz-placeholder          {color:#cccccc;}/* Firefox 19+ */
+  :-moz-placeholder           {color:#cccccc;}/* Firefox 18- */
+  :-ms-input-placeholder      {color:#cccccc;}
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}

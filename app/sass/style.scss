@@ -20,7 +20,7 @@ body{
   align-items: center;
   justify-content: center;
   overflow: auto;
-  font-family: 'Myriad Pro';
+  font-family: 'Myriad Pro', serif;
   font-weight: bold;
 
 }
@@ -34,7 +34,7 @@ body{
     display: inline-block;
     position: relative;
     top: 9px;
-    font-family: "Myriad Pro Cond";
+    font-family: "Myriad Pro Cond", serif;
     font-size: 34px;
     color: #7a7a7a;
   }
@@ -100,17 +100,21 @@ hr{
   &__item{
     box-sizing: border-box;
     border-radius: 5px;
-    padding: 18px;
+    padding: 17px;
     width: 100%;
     box-shadow:inset 0 5px 0 rgb(235, 235, 235);
     border: 0;
-    color: #cccccc;
-    font-size: 17px;
+    font-size: 16px;
+    //@include placeholder-focus;
+    //@include placeholder-text;
+    @include placeholder {
+      color: #cccccc;
+    }
 
     &_username{
     }
     &_password{
-      margin-top: 22px;
+      margin-top: 20px;
     }
   }
 }
