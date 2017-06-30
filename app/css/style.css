@@ -17,8 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: auto;
-  font-family: 'Myriad Pro', serif;
-  font-weight: bold; }
+  font-family: 'Myriad Pro', serif; }
 
 .header {
   text-align: center;
@@ -46,7 +45,8 @@ body {
     padding: 23px 29px; }
     .content__item_text {
       font-size: 14px;
-      color: #6a6a6a; }
+      color: #6a6a6a;
+      font-weight: bold; }
 
 hr {
   background-color: #e9e9e9;
@@ -66,15 +66,30 @@ hr {
     font-size: 15px;
     border-radius: 5px;
     border: 0;
-    color: white; }
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; }
+    .social__btn:focus {
+      border-color: #0366d6;
+      box-shadow: 0 0 0 0.2em rgba(3, 102, 214, 0.3); }
+    .social__btn_text {
+      padding-left: 26px; }
+    .social__btn-icon {
+      position: absolute; }
+      .social__btn-icon_twitter {
+        left: 7px;
+        top: 6px; }
+      .social__btn-icon_facebook {
+        left: 12px; }
     .social__btn_twitter {
       background-color: #6498fa; }
     .social__btn_facebook {
       background-color: #4d73a4; }
 
-.login-form {
+.input {
   margin-top: 9px; }
-  .login-form__item {
+  .input__data {
     box-sizing: border-box;
     border-radius: 5px;
     padding: 17px;
@@ -82,13 +97,18 @@ hr {
     box-shadow: inset 0 5px 0 #ebebeb;
     border: 0;
     font-size: 16px; }
-    .login-form__item ::-webkit-input-placeholder {
+    .input__data::-webkit-input-placeholder {
       color: #cccccc; }
-    .login-form__item :-moz-placeholder {
+    .input__data:-moz-placeholder {
       color: #cccccc; }
-    .login-form__item ::-moz-placeholder {
+    .input__data::-moz-placeholder {
       color: #cccccc; }
-    .login-form__item :-ms-input-placeholder {
+    .input__data:-ms-input-placeholder {
       color: #cccccc; }
-    .login-form__item_password {
-      margin-top: 20px; }
+    .input__data_username {
+      background: white url(../img/username.png) no-repeat 97%; }
+    .input__data_password {
+      margin-top: 20px;
+      background: white url(../img/password.png) no-repeat 97%; }
+  .input__checkbox {
+    margin-top: 20px; }

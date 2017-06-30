@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,27 +24,52 @@
             </span>
 
             <div class="social">
+
                 <button value="Connect with Twitter" name="Connect with Twitter" class="social__btn social__btn_twitter">
-                    Connect with <b>Twitter</b>
+
+                    <span class="social__btn-icon social__btn-icon_twitter">
+
+                        <img src="img/twitter.png" alt="twitter.icon">
+
+                    </span>
+
+                    <span class="social__btn_text">Connect with <b>Twitter</b></span>
+
                 </button>
+
                 <button value="Login with Facebook" name="Login with Facebook" class="social__btn social__btn_facebook">
-                    Login with <b>Facebook</b>
+
+                    <span class="social__btn-icon social__btn-icon_facebook">
+
+                        <img src="img/facebook.svg" alt="facebook.icon">
+                    </span>
+
+                    <span class="social__btn_text">Login with <b>Facebook</b></span>
+
                 </button>
+
             </div>
                 <hr>
             <span class="content__item_text">
                 Log in with registered details:
             </span>
 
-            <div class="form">
-                <form class="login-form">
+            <div class="input">
+                <form class="input_form">
 
-                    <input type="text" name="username"  placeholder="Username" class="login-form__item login-form__item_username">
-                    <input type="password" name="username" placeholder="Password" class="login-form__item login-form__item_password">
 
-                    <input type="checkbox" class="login-form__check" id="check_keep">
-                    <label for="check_keep"> Keep me signed in</label>
-                    <input type="submit" name="login" value="Log In" class="login-form__btn-login">
+                        <input name="username" type="text" class="input__data input__data_username" placeholder="Username">
+
+                        <input name="password" type="password" class="input__data input__data_password" placeholder="Password">
+
+
+                    <div class="input__checkbox">
+                        <input name="checkbox" id="checkbox" type="checkbox" class="input__checkbox-item">
+                        <label for="checkbox" class="input__checkbox-label"></label>
+                    </div>
+
+                    <span class="input__checkbox-text">Keep me signed In</span>
+                    <button type="submit" class="input__submit-button">Log In</button>
 
                 </form>
             </div>

@@ -21,7 +21,6 @@ body{
   justify-content: center;
   overflow: auto;
   font-family: 'Myriad Pro', serif;
-  font-weight: bold;
 
 }
 
@@ -59,6 +58,7 @@ body{
     &_text{
       font-size: 14px;
       color: #6a6a6a;
+      font-weight: bold;
     }
   }
 }
@@ -84,6 +84,30 @@ hr{
     border-radius: 5px;
     border: 0;
     color: white;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+    &:focus {
+      border-color: #0366d6;
+      box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3);
+    }
+
+    &_text{
+      padding-left: 26px;
+    }
+
+    &-icon{
+      position: absolute;
+      &_twitter{
+        left: 7px;
+        top: 6px;
+      }
+
+      &_facebook{
+        left: 12px;
+      }
+    }
 
     &_twitter{
       background-color: #6498fa;
@@ -95,9 +119,9 @@ hr{
   }
 }
 
-.login-form{
+.input{
   margin-top: 9px;
-  &__item{
+  &__data{
     box-sizing: border-box;
     border-radius: 5px;
     padding: 17px;
@@ -105,16 +129,36 @@ hr{
     box-shadow:inset 0 5px 0 rgb(235, 235, 235);
     border: 0;
     font-size: 16px;
-    //@include placeholder-focus;
-    //@include placeholder-text;
+
     @include placeholder {
       color: #cccccc;
     }
 
     &_username{
+      background: white url(../img/username.png) no-repeat 97%;
     }
     &_password{
       margin-top: 20px;
+      background: white url(../img/password.png) no-repeat 97%;
     }
+  }
+
+  &__checkbox{
+    margin-top: 20px;
+    &-item{
+
+    }
+
+    &-lable{
+
+    }
+
+    &-text{
+
+    }
+  }
+
+  &__submit-button{
+
   }
 }

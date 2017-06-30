@@ -5,23 +5,39 @@
     size: 100%;
   }
 }
-@mixin placeholder-focus{
-  ::-webkit-input-placeholder {color: transparent}
-  ::-moz-placeholder          {color: transparent}
-  :-moz-placeholder           {color: transparent}
-  :-ms-input-placeholder      {color: transparent}
-}
 
-@mixin placeholder-text{
-  ::-webkit-input-placeholder {color:#cccccc;}
-  ::-moz-placeholder          {color:#cccccc;}/* Firefox 19+ */
-  :-moz-placeholder           {color:#cccccc;}/* Firefox 18- */
-  :-ms-input-placeholder      {color:#cccccc;}
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
 }
 
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $spread $color;
+    -moz-box-shadow:inset $top $left $blur $spread $color;
+    box-shadow:inset $top $left $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $spread $color;
+    -moz-box-shadow: $top $left $blur $spread $color;
+    box-shadow: $top $left $blur $spread $color;
+  }
 }
