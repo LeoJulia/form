@@ -82,11 +82,17 @@ hr{
     padding: 8px;
     font-size: 15px;
     border-radius: 5px;
-    border: 0;
+    border: 1px solid #4f77b0;
     color: white;
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    font-family: "Myriad Pro", serif;
+
+    @include box-shadow (1px, 1px, 1px, 0, rgba(157,172,195,1), inset);
+
+    //@include box-shadow(0, 1px, 0, 0, #9dacc3, inset);
+    //box-shadow:inset 0 -1px 0 0 #96b1e2;
 
     &:focus {
       border-color: #0366d6;
@@ -146,7 +152,37 @@ hr{
   &__checkbox{
     margin-top: 20px;
     &-item{
+        -webkit-appearance: none;
+        background-color: #d0d0d0;
+        border: 1px solid #919191;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+                    inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+        padding: 10px;
+        border-radius: 5px;
+        display: inline-block;
+        position: relative;
 
+      &:active, &:checked:active{
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+                    inset 0 1px 3px rgba(0,0,0,0.1);
+      }
+
+      &:checked{
+        background-color: #c3c3c3;
+        border: 1px solid #919191;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05),
+                    inset 0px -15px 10px -12px rgba(0,0,0,0.05),                    inset 15px 10px -12px rgba(255,255,255,0.1);
+        color: #99a1a7;
+
+        &:after{
+          content: '\2714';
+          font-size: 15px;
+          position: absolute;
+          top: 0;
+          left: 3px;
+          color: #6a6a6a;
+        }
+      }
     }
 
     &-lable{
