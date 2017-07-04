@@ -91,9 +91,6 @@ hr{
 
     @include box-shadow (1px, 1px, 1px, 0, rgba(157,172,195,1), inset);
 
-    //@include box-shadow(0, 1px, 0, 0, #9dacc3, inset);
-    //box-shadow:inset 0 -1px 0 0 #96b1e2;
-
     &:focus {
       border-color: #0366d6;
       box-shadow: 0 0 0 0.2em rgba(3,102,214,0.3);
@@ -127,6 +124,7 @@ hr{
 
 .input{
   margin-top: 9px;
+
   &__data{
     box-sizing: border-box;
     border-radius: 5px;
@@ -152,6 +150,8 @@ hr{
   &__checkbox{
     margin-top: 20px;
     &-item{
+        margin-top: 6px;
+        margin-left: 0;
         -webkit-appearance: none;
         background-color: #d0d0d0;
         border: 1px solid #919191;
@@ -185,16 +185,55 @@ hr{
       }
     }
 
-    &-lable{
-
+    &-label{
+      position: relative;
+      top: -9px;
+      left: 4px;
+      cursor: pointer;
     }
 
     &-text{
-
+      font-size: 14px;
+      color: #6b6b6b;
+      font-weight: bold;
     }
   }
 
   &__submit-button{
+    position: relative;
+    top: -37px;
+    left: 320px;
+    width: 90px;
+    height: 37px;
+    border-radius: 3px;
+    font-size: 17px;
+    color: white;
+    background: #6e6e6e;
+    border: 1px solid #676767;
+    cursor: pointer;
+    @include box-shadow(0, 1px, 4px, 0px, rgba(94, 94, 94, 1), inset);
 
   }
 }
+
+.option{
+  position: relative;
+  top: -8px;
+  font-size: 14px;
+  font-weight: bold;
+  &__link{
+    text-decoration: none;
+    color: #262626;
+    &-left{
+      float: left;
+    }
+
+    &-right{
+      float: right;
+    }
+  }
+  &__text{
+    color: #6e6e6e;
+  }
+}
+
